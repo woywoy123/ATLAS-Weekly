@@ -1,0 +1,58 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>{}
+\title{An overview of what I have been doing}
+\author{Thomas Nommensen}
+\date{\today}
+\setbeamersize{text margin left = 1pt,text margin right = 5pt}
+\usepackage{graphicx}
+
+% Begin the beamer presentation 
+\begin{document}
+
+% This is for the title page of the presentation
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Analysis - AIDA}
+
+	\begin{itemize}
+		\item \textbf{AIDA}: \textbf{A}n \textbf{I}nclusive \textbf{D}ilepton \textbf{A}nalysis
+		\item In the AIDA framework dilepton events with opposite-flavor and opposite-charge (or same-flavor, same-charge etc.) are selected and binned in histograms with Missing E$_T$ and N$_{jets}$. 
+
+		\item The sensitivity of the analysis may allow for anomalous regions to be identified (i.e. New Physics).
+		\item Starting with the Top DxAODs, SingleTop was used to remove unnecessary trees from the DAODs. Since the tW analysis software packages weren't compatible with the \textbf{DL1r} systematic trees, some modifications were made and pushed upstream. 
+		\item A simple analysis code was written that produced histograms (including systematics) in two separate ROOT files. Generated histograms as input for TRExFitter. Using Asmiov data with injected bumps to explore how the fit works.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}[Figures]
+
+	\begin{figure}[!]
+	\vspace{-0.1cm}
+	\hspace{0cm}
+	\includegraphics[scale = 0.18]{Figures/Hists.png}
+	\end{figure}
+
+	\begin{figure}[!]
+	\vspace*{-0.5cm}
+	\hspace*{-6cm}
+	\includegraphics[scale = 0.185]{Figures/Fit.jpeg}
+	\end{figure}
+	
+	\begin{figure}[!]
+	\vspace*{-5.5cm}	
+	\hspace*{7cm}
+	\includegraphics[scale = 0.2]{Figures/NormFactors.png}
+	\end{figure}
+
+	\begin{figure}[!]
+	\vspace*{-1cm}
+	\hspace*{7cm}
+	\includegraphics[scale = 0.2]{Figures/NuisPar.png}
+	\end{figure}
+
+\end{frame}
+
+\end{document}
